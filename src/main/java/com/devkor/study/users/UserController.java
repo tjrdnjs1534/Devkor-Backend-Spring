@@ -19,7 +19,6 @@ public class UserController {
 
     @PostMapping("")
     public UserDTO createUser(@RequestBody UserDTO userDTO){
-
         return userService.createUser(userDTO);
     }
 }
