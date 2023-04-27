@@ -7,18 +7,19 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @Builder
-public class UserDTO {
+public class UserDto {
     private String name;
     private int age;
-    private String userID;
+    private String userId;
     private String password;
 
     public UserEntity toEntity(){
         return UserEntity.builder()
                 .name(name)
                 .age(age)
-                .userID(userID)
+                .userId(userId)
                 .password(password)
                 .build();
     }
+
 }
