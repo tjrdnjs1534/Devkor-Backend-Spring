@@ -1,16 +1,16 @@
 package com.devkor.study.products;
 
-import com.devkor.study.products.dto.ProductDTO;
+import com.devkor.study.products.dto.ProductDto;
 
 import java.util.List;
 
 public interface ProductService {
-    List<ProductDTO> findAllProducts();
-    ProductDTO findProductById(Long id);
+    List<ProductDto> findAllProducts();
+    ProductDto findProductById(Long id);
 
-    ProductDTO createProduct(ProductDTO productDTO);
+    ProductDto createProduct(ProductDto productDto);
 
-    ProductDTO updateProduct(Long id, ProductDTO productDTO);
+    ProductDto updateProduct(Long id, ProductDto productDto);
 //
     void deleteProduct(Long id);
 

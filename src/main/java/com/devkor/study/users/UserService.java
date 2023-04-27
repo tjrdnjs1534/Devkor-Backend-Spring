@@ -2,13 +2,12 @@ package com.devkor.study.users;
 
 import java.util.List;
 
-
 public interface UserService {
-    List<UserDTO> findAllUsers();
-    UserDTO findUserById(Long id);
-    UserDTO createUser(UserDTO userDTO);
+    List<UserDto> findAllUsers();
+    UserDto findUserById(Long id);
+    UserDto createUser(UserDto userDto);
 
-    UserDTO updateUser(Long id, UserDTO userDTO);
+    UserDto updateUser(Long id, UserDto userDto);
     void deleteUser(Long id);
 
 

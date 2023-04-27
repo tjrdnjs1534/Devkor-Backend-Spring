@@ -9,7 +9,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductPhotoDTO {
+public class ProductPhotoDto {
     private List<String> url;
 
 

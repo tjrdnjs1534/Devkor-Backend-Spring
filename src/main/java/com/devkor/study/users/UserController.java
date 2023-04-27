@@ -15,25 +15,24 @@ public class UserController {
     }
 
     @GetMapping("")
-    public List<UserDTO> findAllUsers(){
+    public List<UserDto> findAllUsers(){
         return userService.findAllUsers(); //entity를 dto로 바꾸기
     }
 
     @GetMapping("/{id}")
-    public UserDTO findUserById(@PathVariable("id") Long id){
+    public UserDto findUserById(@PathVariable("id") Long id){
         return userService.findUserById(id);
     }
 
-
     @PostMapping("")
-    public UserDTO createUser(@RequestBody UserDTO userDTO){
-        return userService.createUser(userDTO);
+    public UserDto createUser(@RequestBody UserDto userDto){
+        return userService.createUser(userDto);
     }
 
 
     @PatchMapping("/{id}")
-    public UserDTO updateUser(@PathVariable("id") Long id , @RequestBody UserDTO userDTO){
-        return userService.updateUser(id, userDTO);
+    public UserDto updateUser(@PathVariable("id") Long id , @RequestBody UserDto userDto){
+        return userService.updateUser(id, userDto);
     }
 
     @DeleteMapping("/{id}")

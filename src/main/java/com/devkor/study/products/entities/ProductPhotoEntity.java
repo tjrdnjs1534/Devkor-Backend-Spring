@@ -19,7 +19,7 @@ public class ProductPhotoEntity {
 
     private String url;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="ref_productID")
     private ProductEntity product;
 

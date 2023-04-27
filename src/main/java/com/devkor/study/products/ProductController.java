@@ -1,6 +1,6 @@
 package com.devkor.study.products;
 
-import com.devkor.study.products.dto.ProductDTO;
+import com.devkor.study.products.dto.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,23 +16,23 @@ public class ProductController {
     }
 
     @GetMapping("")
-    public List<ProductDTO> findAllProducts(){
+    public List<ProductDto> findAllProducts(){
         return productService.findAllProducts();
     }
     @GetMapping("/{id}")
-    public ProductDTO findProductById(@PathVariable("id") Long id) {
+    public ProductDto findProductById(@PathVariable("id") Long id) {
         return productService.findProductById(id);
     }
 
     @PostMapping("")
-    public ProductDTO createProduct(@RequestBody ProductDTO productDTO){
-        return productService.createProduct(productDTO);
+    public ProductDto createProduct(@RequestBody ProductDto productDto){
+        return productService.createProduct(productDto);
     }
 
 
     @PatchMapping("{id}")
-    public ProductDTO updateProduct(@PathVariable("id") Long id, @RequestBody ProductDTO productDTO){
-        return productService.updateProduct(id,productDTO);
+    public ProductDto updateProduct(@PathVariable("id") Long id, @RequestBody ProductDto productDto){
+        return productService.updateProduct(id,productDto);
     }
     @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable("id") Long id){
