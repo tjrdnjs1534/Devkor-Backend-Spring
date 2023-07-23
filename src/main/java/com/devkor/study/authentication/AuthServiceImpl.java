@@ -8,9 +8,10 @@ public class AuthServiceImpl implements AuthService {
     @Value("${jwt.secretKey}")
     private String secretKey;
 
-    private Long expiredMs = 1000 * 60 * 60l;
-    public String login(String userId, String password){
-        return JwtService.createJwt(userId,secretKey,expiredMs);
+    private Long accessTokenExpiredMs = 1000 * 3 * 60l;
+    private Long refreshTokenExpiredMs = 1000 * 60 * 60l *24;
+    public JwtInfoDto login(String userId, String password){
+        return JwtService.createJwt(userId,secretKey,accessTokenExpiredMs, refreshTokenExpiredMs);
     }
 
 }

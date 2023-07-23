@@ -13,7 +13,7 @@ public class AuthController {
 
     private final AuthService authService;
     @PostMapping("/login")
-    public String login(@RequestBody AuthDto authDto){
+    public JwtInfoDto login(@RequestBody AuthDto authDto){
         return authService.login(authDto.getUserId(), authDto.getPassword());
     }
 }
